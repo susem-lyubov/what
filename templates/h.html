@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6 7</title>
+    <link href="{{ url_for('static', filename='h.css') }}" rel="stylesheet" />
+
+</head>
+
+<body>
+    <label for="level">Select List:</label>
+
+    <select id="level">
+        <option value="one">List One</option>
+        <option value="two">List Two</option>
+        <option value="three">List Three</option>
+    </select>
+
+    <button onclick="newQuestion()">Get Question</button>
+
+    <input type="text" id="answerInput" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Submit Answer</button>
+
+    <p id="result"></p>
+
+    <script src="{{ url_for('static', filename='h.js') }}"></script>
+
+</body>
+
+</html>
