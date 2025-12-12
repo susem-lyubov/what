@@ -1,5 +1,4 @@
-import json
-import random
+import json, random
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
@@ -28,8 +27,8 @@ def getQuestion(level):
 @app.route("/api/check", methods=["POST"])
 def checkAnswer():
     data = request.get_json()
-    user = data["user_answer"].strip().lower()
-    correct = data["correct_answer"].strip().lower()
+    user = data["user_answer"].strip()
+    correct = data["correct_answer"].strip()
 
     return jsonify({
         "correct": user == correct
